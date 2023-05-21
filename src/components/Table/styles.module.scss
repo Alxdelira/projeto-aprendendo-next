@@ -1,0 +1,12 @@
+@import "../../styles/theme.scss";
+
+.table {
+  box-sizing: border-box;
+  width: 100%;
+  border: .063rem solid $darkGray;
+  border-collapse: collapse;
+  font-family: $textMediumFont;
+  font-size: $textMediumFontSize;
+  font-weight: $textMediumFontWeight;
+  color: $textMediumColor;
+}

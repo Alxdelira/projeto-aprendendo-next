@@ -1,0 +1,41 @@
+@import "../../styles/theme.scss";
+
+.header {
+  background-color: $primary;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+}
+
+.logout {
+  margin-right: 1rem;
+  font-family: $textMediumFont;
+  font-size: $textMediumFontSize;
+  font-weight: $textMediumFontWeight;
+  cursor: pointer;
+}
+
+.title {
+  color: $white;
+  font-family: $h2Font;
+  font-size: $h2FontSize;
+  font-weight: $h2FontWeight;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  margin-right: 1rem;
+  font-family: $textMediumFont;
+  font-size: $textMediumFontSize;
+  font-weight: $textMediumFontWeight;
+}
+
+.avatar {
+  margin-right: 1rem;
+}
