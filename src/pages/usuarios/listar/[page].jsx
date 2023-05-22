@@ -6,6 +6,7 @@ import H from "@/components/H";
 import Input from "@/components/Input";
 import Label from "@/components/Label";
 import Loading from "@/components/Loading";
+import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import Tbody from "@/components/Tbody";
 import Td from "@/components/Td";
@@ -24,6 +25,7 @@ export default function ListarUsuarios() {
 
   const [usuarios, setUsuarios] = useState(null);
   const maxDocs = useRef(null);
+  const maxPages = useRef(null);
   const nome = useRef(null);
   const email = useRef(null);
 
@@ -34,10 +36,10 @@ export default function ListarUsuarios() {
       const emailRef = email.current?.value || "";
 
       if (page) {
-
         const res = await api.get(`/usuarios?page=${page}&nome=${nomeRef}&email=${emailRef}`)
-        maxDocs.current = res.data.totalDocs;
         setUsuarios(res.data.docs);
+        maxDocs.current = res.data.totalDocs;
+        maxPages.current = res.data.totalPages;
         console.log(res)
       }
 
@@ -109,6 +111,15 @@ export default function ListarUsuarios() {
             ))}
           </Tbody>
         </Table>
+      </Container>
+
+      <Container margin_top="1rem">
+        <Pagination
+          link="/usuarios/listar/"
+          numberPages={maxPages.current}
+          maxPageComponent={5}
+          selectPage={router.query.page}
+        />
       </Container>
     </>
   )

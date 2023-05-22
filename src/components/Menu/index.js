@@ -10,6 +10,7 @@ export default function Menu() {
   const menuItens = [
     { id: 1, url: "/home", icon: "/icons/home.svg", text: "Home" },
     { id: 2, url: "/usuarios/listar/1", icon: "/icons/user.svg", text: "Usuários" },
+    { id: 3, url: "/usuarios/cadastrar", icon: "/icons/cadastrar-pessoa.svg", text: "Cadastrar Usuários" },
   ]
 
   return (
