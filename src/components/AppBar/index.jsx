@@ -24,7 +24,7 @@ export default function AppBar({ title }) {
   return (
     <>
     {modalSair && (
-      <Modal minWidth="30%" modalTitle="Tem certeza que deseja sair ?" booleanFunction={() => setModalSair(false)}>
+      <Modal minWidth="30%" modalTitle="Deseja desconectar ?" booleanFunction={() => setModalSair(false)}>
         <Container margin_top="2rem" justifyCenter="true">
           <Button onClick={() => logout()}>Sim</Button>
           <Button onClick={() => setModalSair(false)} danger="true">Não</Button>
@@ -35,7 +35,7 @@ export default function AppBar({ title }) {
       <header className={styles.header}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.options}>
-          <div className={styles.link}><Link href="/usuarios/perfil">Meu Perfil</Link></div>
+          <div className={styles.link}><Link href="/home/sobre">Sobre</Link></div>
           <div className={styles.logout} title='Sair da plataforma' onClick={() => setModalSair(true)}>
             <p>Sair</p>
           </div>

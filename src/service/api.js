@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function setupAPIClient(ctx) {
   const api = axios.create({
-    baseURL: "http://localhost:3001",
+    baseURL: "http://docker-3081.app.fslab.dev",
     headers: {
       Accept: "application/json"
     }
