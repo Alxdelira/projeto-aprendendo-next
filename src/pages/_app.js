@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
       <meta name='viewport' content='width=device-width, initial-scale=1' />
     </Head>
     <Container>
-      <AppBar title="Gerenciamento de Usuarios" />
+      <AppBar title="Portfólio Pessoal" />
     </Container>
     <Container row="true">
       <Container>
